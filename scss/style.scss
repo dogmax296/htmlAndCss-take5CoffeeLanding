@@ -1,7 +1,14 @@
 @import "variables.scss";
 @import "mixins.scss";
 @import "normalize.scss";
+@import "font.scss";
 @import "owl-carousel.scss";
+
+
+html{
+	font-family: $font-family-main,Helvetica, sans-serif;
+	font-size:13px;
+}
 
 *{
 	-webkit-box-sizing: border-box;
@@ -15,7 +22,61 @@
 
 .container{
 	min-width:$container-min-width;
-	margin:0 auto;
+	@include margin-custom(0,auto,0,auto);
+}
+
+.heading{
+	&-main{
+		@include font($font-family-ofthen,44px,$gray-lighter);
+		&--danger{
+			color:$brand-danger;
+		}
+		&--info{
+			color: $brand-info;
+		}
+		&--step{
+			font-size: 64px;
+			color:$brand-danger;
+		}
+	}
+	&-item{
+		@include font($font-family-main,27px,$brand-info);
+		&--big{
+			font-size:36px;
+		}
+	}
+	&-stage{
+		@include font($font-family-rare,31px,$brand-info);
+	}
+	&-term{
+		@include font($font-family-main,85px,$brand-danger);
+	}
+	
+}
+
+.btn{
+	background-color: transparent;
+	@include font($font-family-rare,20px,$brand-info)
+	border:3px solid;
+	border-radius:20px;
+	box-shadow:none;
+	@include padding-custom(26px,26px,26px,26px);
+	&--danger{
+		color: $gray-lighter;
+		border-color:$brand-danger;
+		
+	}
+	&--small{
+		border:1px;
+		@include padding-custom(3px,9px,3px,12px);
+	}
+	&--social{
+		font-size: 8px;
+		background-color: $gray-dark;
+		color: transparent;
+		border:none;
+		@include padding-custom(9px,9px,7px,9px);
+	}
 }
 
 .slideshow{
