@@ -1,0 +1,29 @@
+@import "variables.scss";
+@import "mixins.scss";
+@import "normalize.scss";
+@import "owl-carousel.scss";
+
+*{
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.wrapper{
+	min-width:$screen-min-width;
+}
+
+.container{
+	min-width:$container-min-width;
+	margin:0 auto;
+}
+
+.slideshow{
+	&__item{
+		height:680px;
+	}
+	&__img{
+		width:100%;
+		height:auto;
+	}
+}
