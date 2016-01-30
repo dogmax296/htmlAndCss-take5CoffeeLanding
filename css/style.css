@@ -465,7 +465,6 @@ th {
  * 	Owl Carousel - Video Plugin
  */
 html {
-  font-family: "ProximaNova-Regular", Helvetica, sans-serif;
   font-size: 13px;
 }
 
@@ -473,16 +472,28 @@ html {
   box-sizing: border-box;
 }
 
+ul {
+  padding-right: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.clearfix {
+  clear: both;
+}
+
 .wrapper {
-  min-width: 1020px;
+  min-width: 960px;
 }
 
 .container {
-  min-width: 940px;
+  width: 940px;
   margin-top: 0;
   margin-right: auto;
   margin-bottom: 0;
   margin-left: auto;
+  position: relative;
 }
 
 .heading-main {
@@ -502,6 +513,10 @@ html {
 .heading-main--step {
   font-size: 64px;
   color: #cb5e54;
+}
+
+.heading-main--finance {
+  color: #e9e4db;
 }
 
 .heading-item {
@@ -527,12 +542,14 @@ html {
 }
 
 .btn {
+  display: inline-block;
+  text-decoration: none;
   background-color: transparent;
   font-family: "ProximaNova-Semibold";
   font-size: 20px;
   color: #253e55;
   border: 3px solid;
-  border-radius: 20px;
+  border-radius: 35px;
   box-shadow: none;
   padding-top: 26px;
   padding-right: 26px;
@@ -540,13 +557,23 @@ html {
   padding-left: 26px;
 }
 
+.btn:hover, .btn:focus {
+  background-color: #253e55;
+  color: #ffffff;
+  border-color: #253e55;
+}
+
 .btn--danger {
   color: #ffffff;
   border-color: #cb5e54;
 }
 
+.btn--danger:hover, .btn--danger:focus {
+  background-color: #cb5e54;
+}
+
 .btn--small {
-  border: 1px;
+  border: 1px solid;
   padding-top: 3px;
   padding-right: 9px;
   padding-bottom: 3px;
@@ -564,13 +591,535 @@ html {
   padding-left: 9px;
 }
 
+.img-responsive {
+  width: 100%;
+  height: auto;
+}
+
+.header__content {
+  position: absolute;
+  z-index: 2;
+  margin-top: 46px;
+  margin-bottom: 0;
+}
+
+.header__heading {
+  margin-top: 0;
+  margin-bottom: 28px;
+}
+
+.logo {
+  width: 180px;
+  height: 40px;
+}
+
+.logo--header {
+  margin-top: 0;
+  margin-bottom: 28px;
+}
+
+.logo-project {
+  width: 400px;
+  height: 353px;
+  display: inline-block;
+  vertical-align: top;
+}
+
 .slideshow__item {
   height: 680px;
 }
 
-.slideshow__img {
-  width: 100%;
-  height: auto;
+.project {
+  background-color: #e9e4db;
+}
+
+.project__content {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.project__thumb {
+  width: 122px;
+  height: 91px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.project__content {
+  margin-top: 60px;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 150px;
+}
+
+.project__heading {
+  margin-top: 0;
+  margin-bottom: 57px;
+}
+
+.project__info {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 0;
+  margin-left: 32px;
+  padding-top: 6px;
+  padding-bottom: 0;
+}
+
+.project__btn {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.project__text {
+  color: #253e55;
+  font-size: 15px;
+}
+
+.project__text span {
+  font-family: "ProximaNova-Bold";
+  color: #cb5e54;
+}
+
+.finance {
+  background-color: #253e55;
+  text-align: center;
+}
+
+.finance__heading--main {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.finance__heading--sub {
+  margin-top: 0;
+  margin-bottom: 55px;
+}
+
+.finance__content {
+  padding-top: 80px;
+  padding-bottom: 72px;
+}
+
+.finance__info {
+  width: 460px;
+  margin-top: 0;
+  margin-bottom: 95px;
+  color: #ffffff;
+  font-size: 15px;
+  display: inline-block;
+  text-align: left;
+}
+
+.finance__features {
+  list-style-type: none;
+}
+
+.finance__item {
+  display: inline-block;
+  margin-right: 95px;
+  margin-left: 0;
+}
+
+.finance__item:last-child {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.finance__ico {
+  width: 45px;
+  height: 45px;
+  background-color: red;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 30px;
+  margin-left: auto;
+}
+
+.finance__number {
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 30px;
+  margin-left: auto;
+}
+
+.finance__text {
+  font-family: "ProximaNova-Bold";
+  font-size: 18px;
+  color: #e9e4db;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+}
+
+.franchise {
+  background-color: #ebe6dd;
+  text-align: center;
+  padding-top: 85px;
+  padding-bottom: 105px;
+}
+
+.franchise__heading {
+  margin-top: 0;
+  margin-bottom: 90px;
+}
+
+.franchise__features {
+  list-style-type: none;
+}
+
+.franchise__item {
+  display: inline-block;
+  vertical-align: top;
+  width: 345px;
+  margin-right: 155px;
+  margin-left: 0;
+}
+
+.franchise__ico {
+  width: 45px;
+  height: 45px;
+  background-color: red;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 33px;
+  margin-left: 0;
+}
+
+.franchise__info {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+}
+
+.franchise__info-heading {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.franchise__info-text {
+  font-size: 18px;
+  color: #253e55;
+}
+
+.franchise__btn {
+  margin-top: 0;
+  margin-bottom: 95px;
+}
+
+.franchise__block-img {
+  height: 370px;
+  width: 370px;
+  background: no-repeat center center;
+  background-size: cover;
+  background-image: url(../images/carousel/1.jpg);
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 105px;
+  margin-left: 0;
+}
+
+.franchise__block-info {
+  width: 430px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.franchise__block-heading {
+  padding-top: 0;
+  padding-bottom: 25px;
+  border-bottom: 10px solid #ffffff;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.franchise__block-heading--main {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.franchise__block-heading--sub {
+  font-size: 18px;
+  color: #253e55;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.franchise__block-ico {
+  width: 55px;
+  height: 54px;
+  background-color: red;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 30px;
+  margin-left: 0;
+}
+
+.franchise__block-text {
+  display: inline-block;
+  vertical-align: middle;
+  border-left: 3px solid #ffffff;
+  width: 340px;
+  padding-top: 15px;
+  padding-right: 0;
+  padding-bottom: 16px;
+  padding-left: 45px;
+}
+
+.picture--middle {
+  height: 685px;
+  background: no-repeat center center;
+  background-size: cover;
+  background-image: url(../images/carousel/2.jpg);
+}
+
+.picture--bottom {
+  height: 600px;
+  background: no-repeat center center;
+  background-size: cover;
+  background-image: url(../images/carousel/3.jpg);
+}
+
+.stages {
+  text-align: center;
+  background-color: #ebe6dd;
+  padding-top: 90px;
+  padding-bottom: 75px;
+}
+
+.stages__heading {
+  margin-top: 0;
+  margin-bottom: 80px;
+}
+
+.stages__features {
+  text-align: left;
+}
+
+.stages__item {
+  display: inline-block;
+  vertical-align: top;
+  width: 420px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 80px;
+  margin-left: 0;
+}
+
+.stages__item:nth-child(odd) {
+  margin-right: 95px;
+  margin-left: 0;
+}
+
+.stages__item:last-child {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.stages__item:nth-last-child(2) {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.stages__item-heading {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.stages__header {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.stages__number {
+  display: inline-block;
+  vertical-align: top;
+  border-bottom: 10px solid #ffffff;
+  margin-top: 0;
+  margin-right: 25px;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 0;
+  padding-bottom: 30px;
+}
+
+.stages__text {
+  font-size: 18px;
+  color: #253e55;
+}
+
+.term {
+  background: no-repeat center center;
+  background-size: cover;
+  background-image: url(../images/term-bg.png);
+  padding-top: 135px;
+  padding-bottom: 85px;
+}
+
+.term__heading {
+  margin-top: 0;
+  margin-bottom: 25px;
+  display: inline-block;
+}
+
+.term__number {
+  font-family: "ProximaNova-Bold";
+  font-size: 243px;
+  color: #ffffff;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 219px;
+  margin-left: 150px;
+}
+
+.term__info {
+  display: inline-block;
+  vertical-align: middle;
+  width: 270px;
+}
+
+.term__text {
+  color: #e9e4db;
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.arguments {
+  background-color: #ebe6dd;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.arguments__royalty {
+  display: inline-block;
+  width: 278px;
+  height: 103px;
+  background-color: #cb5e54;
+  padding-top: 10px;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 75px;
+}
+
+.arguments__royalty-number {
+  font-family: "ProximaNova-Bold";
+  font-size: 100px;
+  color: #253e55;
+  float: left;
+}
+
+.arguments__royalty-text {
+  font-size: 15px;
+  color: #ffffff;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.arguments__royalty-text span {
+  font-size: "ProximaNova-Bold";
+}
+
+.arguments__features {
+  list-style-type: none;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.arguments__item {
+  display: inline-block;
+  vertical-align: top;
+  width: 285px;
+}
+
+.arguments__item--rigth {
+  text-align: right;
+}
+
+.arguments__item--center {
+  text-align: center;
+}
+
+.arguments__item--left {
+  text-align: left;
+}
+
+.arguments__item-heading {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.arguments__item-line {
+  display: inline-block;
+  width: 144px;
+  height: 10px;
+  background-color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.arguments__item-text {
+  color: #253e55;
+  font-size: 18px;
+}
+
+.arguments__line {
+  display: inline-block;
+  width: 3px;
+  height: 60px;
+  background-color: #cb5e54;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.arguments__cta-heading {
+  margin-top: 0;
+  margin-bottom: 65px;
+}
+
+.about {
+  text-align: center;
+  background-color: #ebe6dd;
+}
+
+.about__top {
+  display: inline-block;
+  width: 674px;
+  height: 523px;
+  background-image: url(../images/brand-bg.png);
+  margin-top: 0;
+  margin-bottom: 105px;
+}
+
+.about__heading {
+  margin-top: 0;
+  margin-bottom: 75px;
+}
+
+.about__text {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.about__text-item {
+  width: 360px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 0;
+  margin-right: 45px;
+  margin-bottom: 45px;
+  margin-left: 0;
+}
+
+.about__text-item:nth-child(even) {
+  margin-right: 0;
+  margin-left: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

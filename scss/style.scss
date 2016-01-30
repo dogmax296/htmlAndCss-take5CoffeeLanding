@@ -6,7 +6,7 @@
 
 
 html{
-	font-family: $font-family-main,Helvetica, sans-serif;
+	// font-family: $font-family-main,Helvetica, sans-serif;
 	font-size:13px;
 }
 
@@ -16,13 +16,23 @@ html{
 	        box-sizing: border-box;
 }
 
+ul{
+	@include padding-horizontal(0,0);
+	@include margin-vertical(0,0);
+}
+
+.clearfix{
+	clear:both;
+}
+
 .wrapper{
 	min-width:$screen-min-width;
 }
 
 .container{
-	min-width:$container-min-width;
+	width:$container-width;
 	@include margin-custom(0,auto,0,auto);
+	position: relative;
 }
 
 .heading{
@@ -37,6 +47,9 @@ html{
 		&--step{
 			font-size: 64px;
 			color:$brand-danger;
+		}
+		&--finance{
+			color:$gray;
 		}
 	}
 	&-item{
@@ -55,19 +68,31 @@ html{
 }
 
 .btn{
+	display: inline-block;
+	text-decoration: none;
 	background-color: transparent;
 	@include font($font-family-rare,20px,$brand-info)
 	border:3px solid;
-	border-radius:20px;
+	border-radius:35px;
 	box-shadow:none;
 	@include padding-custom(26px,26px,26px,26px);
+	&:hover,
+	&:focus{
+		background-color: $brand-info;
+		color: $gray-lighter;
+		border-color:$brand-info;
+	}
 	&--danger{
 		color: $gray-lighter;
 		border-color:$brand-danger;
+		&:hover,
+		&:focus{
+			background-color: $brand-danger;
+		}
 		
 	}
 	&--small{
-		border:1px;
+		border:1px solid;
 		@include padding-custom(3px,9px,3px,12px);
 	}
 	&--social{
@@ -78,13 +103,406 @@ html{
 		@include padding-custom(9px,9px,7px,9px);
 	}
 }
+.img{
+	&-responsive{
+		width:100%;
+		height:auto;
+	}
+}
+
+.header{
+	&__content{
+		position: absolute;
+		z-index:2;
+		@include margin-vertical(46px,0);
+	}
+	&__heading{
+		@include margin-vertical(0,28px);
+	}
+}
+
+.logo{
+	width: 180px;
+	height: 40px;
+	&--header{
+		@include margin-vertical(0,28px);
+	}
+	&-project{
+		width: 400px;
+		height: 353px;
+		display: inline-block;
+		vertical-align: top;
+	}
+}
 
 .slideshow{
 	&__item{
 		height:680px;
 	}
-	&__img{
-		width:100%;
-		height:auto;
+	
+}
+
+.project{
+	background-color: $gray;
+	&__content{
+		display: inline-block;
+		vertical-align: top;
+	}
+	&__thumb{
+		width: 122px;
+		height: 91px;
+		display: inline-block;
+		vertical-align: top;
+	}
+	&__content{
+		
+		@include margin-custom(60px,0,0,150px);
+	}
+
+	&__heading{
+		@include margin-vertical(0,57px);
+	}
+
+	&__info{
+		display: inline-block;
+		vertical-align: top;
+		@include margin-horizontal(0,32px);
+		@include padding-vertical(6px,0);
+	}
+
+	&__btn{
+		@include margin-vertical(0,20px);
+		
+	}
+
+	&__text{
+		color: $brand-info;
+		font-size: 15px;
+		span{
+			font-family:$font-family-ofthen;
+			color: $brand-danger;
+		}
+	}
+}
+
+.finance{
+	background-color:$brand-info;
+	text-align: center;
+	&__heading{
+		&--main{
+			@include margin-vertical(0,30px);
+		}
+		&--sub{
+			@include margin-vertical(0,55px);
+		}
+	}
+	&__content{
+		@include padding-vertical(80px,72px);
+	}
+	&__info{
+		width: 460px;
+		@include margin-vertical(0,95px);
+		color: $gray-lighter;
+		font-size: 15px;
+		display: inline-block;
+		text-align: left;
+	}
+	&__features{
+		list-style-type: none;
+		
+	}
+	&__item{
+		display: inline-block;
+		@include margin-horizontal(95px,0);
+		&:last-child{
+			@include margin-horizontal(0,0);
+		}
+		
+	}
+	&__ico{
+		width:45px;
+		height: 45px;
+		background-color: red;
+		@include margin-custom(0,auto,30px,auto);
+	}
+	&__number{
+		@include margin-custom(0,auto,30px,auto);
+	}
+	&__text{
+		@include font($font-family-ofthen,18px,$gray);
+		@include margin-custom(0,auto,0,auto);
+	}
+}
+
+.franchise{
+	background-color: $gray-dark;
+	text-align: center;
+	@include padding-vertical(85px,105px);
+	&__heading{
+		@include margin-vertical(0,90px);
+		
+	}
+	&__features{
+		list-style-type: none;
+	}
+	&__item{
+		display: inline-block;
+		vertical-align: top;
+		width: 345px;
+		@include margin-horizontal(155px,0);
+	}
+	&__ico{
+		width:45px;
+		height: 45px;
+		background-color: red;
+		display: inline-block;
+		vertical-align: top;
+		@include margin-horizontal(33px,0);
+	}
+	&__info{
+		display: inline-block;
+		vertical-align: top;
+		text-align: left;
+		&-heading{
+			@include margin-vertical(0,30px);
+		}
+		&-text{
+			font-size: 18px;
+			color: $brand-info;
+		}
+	}
+	&__btn{
+		@include margin-vertical(0,95px);
+	}
+	&__block{
+		&-img{
+			height: 370px;
+			width: 370px;
+			@include background-cover;
+			background-image:url(../images/carousel/1.jpg);
+			border-radius:50%;
+			display: inline-block;
+			vertical-align: top;
+			@include margin-horizontal(105px,0);	
+		}
+		&-info{
+			width:430px;
+			display: inline-block;
+			vertical-align: top;
+		}
+		&-heading{
+			@include padding-vertical(0,25px);
+			border-bottom:10px solid $gray-lighter;
+			@include margin-vertical(0,30px);
+			&--main{
+				@include margin-vertical(0,25px);
+			}
+			&--sub{
+				font-size: 18px;
+				color: $brand-info;
+				@include margin-vertical(0,0);
+			}
+		}
+		&-ico{
+			width: 55px;
+			height:54px;
+			background-color: red;
+			display: inline-block;
+			vertical-align: middle;
+			@include margin-horizontal(30px,0);	
+		}
+		&-text{
+			display: inline-block;
+			vertical-align: middle;
+			border-left:3px solid $gray-lighter;
+			width: 340px;
+			@include padding-custom(15px,0,16px,45px);
+		}
+	}
+}
+
+.picture{
+	&--middle{
+		height: 685px;
+		@include background-cover;
+		background-image:url(../images/carousel/2.jpg);
+	}
+	&--bottom{
+		height: 600px;
+		@include background-cover;
+		background-image:url(../images/carousel/3.jpg);
+	}
+}
+
+.stages{
+	text-align: center;
+	background-color: $gray-dark;
+	@include padding-vertical(90px,75px);
+	&__heading{
+		@include margin-vertical(0,80px);
+	}
+	&__features{
+		text-align: left;
+	}
+	&__item{
+		display: inline-block;
+		vertical-align: top;
+		width: 420px;
+		
+		&:nth-child(odd){
+			@include margin-horizontal(95px,0);
+			
+		}
+		&:last-child{
+			@include margin-vertical(0,0);
+		}
+		&:nth-last-child(2){
+			@include margin-vertical(0,0);
+		}
+		@include margin-custom(0,0,80px,0);
+		&-heading{
+		display: inline-block;
+		vertical-align: top;
+		@include margin-vertical(0,0);
+		}
+	}
+	&__header{
+		@include margin-vertical(0,30px);
+	}
+	&__number{
+		display: inline-block;
+		vertical-align: top;
+		border-bottom:10px solid $gray-lighter;
+		@include margin-custom(0,25px,0,0);
+		@include padding-vertical(0,30px);
+	}
+	&__text{
+		font-size: 18px;
+		color: $brand-info;
+	}
+}
+
+.term{
+	@include background-cover;
+	background-image:url(../images/term-bg.png);
+	@include padding-vertical(135px,85px);
+	&__heading{
+		@include margin-vertical(0,25px);
+		display: inline-block;
+	}
+	&__number{
+		@include font($font-family-ofthen,243px,$gray-lighter);
+		display: inline-block;
+		vertical-align: middle;
+		@include margin-horizontal(219px,150px);
+	}
+	&__info{
+		display: inline-block;
+		vertical-align: middle;
+		width:270px;
+		
+	}
+	&__text{
+		color: $gray;
+		font-size: 18px;
+		@include margin-vertical(0,40px);
+	}
+}
+
+.arguments{
+	background-color:$gray-dark;
+	@include padding-vertical(80px,80px);
+	text-align: center;
+	&__royalty{
+		display: inline-block;
+		width: 278px;
+		height: 103px;
+		background-color: $brand-danger;
+		@include padding-vertical(10px,0);
+		@include margin-vertical(0,75px);
+		&-number{
+			@include font($font-family-ofthen,100px,$brand-info)
+			float:left;
+		}
+		&-text{
+			font-size: 15px;
+			color: $gray-lighter;
+			overflow:hidden;
+			@include margin-vertical(10px,0)
+			span{
+				font-size: $font-family-ofthen;
+			}
+		}
+	}
+	&__features{
+		list-style-type: none;
+		@include margin-vertical(0,30px);
+	}
+	&__item{
+		display: inline-block;
+		vertical-align: top;
+		width: 285px;
+		&--rigth{
+			text-align: right;
+		}
+		&--center{
+			text-align: center;
+		}
+		&--left{
+			text-align: left;
+		}
+		&-heading{
+			@include margin-vertical(0,25px);
+		}
+		&-line{
+			display: inline-block;
+			width: 144px;
+			height: 10px;
+			background-color: $gray-lighter;
+			@include margin-vertical(0,40px);
+		}
+		&-text{
+			color: $brand-info;
+			font-size: 18px;
+		}
+	}
+	&__line{
+		display: inline-block;
+		width: 3px;
+		height: 60px;
+		background-color: $brand-danger;
+		@include margin-vertical(0,40px);
+	}
+	&__cta{
+		&-heading{
+			@include margin-vertical(0,65px);
+		}
+	}
+}
+
+.about{
+	text-align: center;
+	background-color: $gray-dark;
+	&__top{
+		display: inline-block;
+		width: 674px;
+		height: 523px;
+		background-image: url(../images/brand-bg.png);
+		@include margin-vertical(0,105px);
+	}
+	&__heading{
+		@include margin-vertical(0,75px);
+	}
+	&__text{
+		@include margin-vertical(0,30px);
+		&-item{
+			width: 360px;
+			display: inline-block;
+			vertical-align: top;
+			@include margin-custom(0,45px,45px,0);
+			&:nth-child(even){
+				@include margin-horizontal(0,0);
+			}
+		}
 	}
 }
