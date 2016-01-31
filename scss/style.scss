@@ -1,12 +1,13 @@
+@import "bootstrap.scss";
 @import "variables.scss";
 @import "mixins.scss";
-@import "normalize.scss";
+
 @import "font.scss";
 @import "owl-carousel.scss";
 
 
 html{
-	// font-family: $font-family-main,Helvetica, sans-serif;
+	font-family: $font-family-main,Helvetica, sans-serif;
 	font-size:13px;
 }
 
@@ -76,6 +77,8 @@ ul{
 	border-radius:35px;
 	box-shadow:none;
 	@include padding-custom(26px,26px,26px,26px);
+	transition-duration: 0.4s;
+	transition-property: color, background-color,border-color;
 	&:hover,
 	&:focus{
 		background-color: $brand-info;
@@ -88,6 +91,7 @@ ul{
 		&:hover,
 		&:focus{
 			background-color: $brand-danger;
+			border-color:$brand-danger;
 		}
 		
 	}
@@ -105,7 +109,7 @@ ul{
 }
 .img{
 	&-responsive{
-		width:100%;
+		max-width:100%;
 		height:auto;
 	}
 }
@@ -122,8 +126,8 @@ ul{
 }
 
 .logo{
-	width: 180px;
-	height: 40px;
+	width: 183px;
+	height: 42px;
 	&--header{
 		@include margin-vertical(0,28px);
 	}
@@ -138,10 +142,15 @@ ul{
 .slideshow{
 	&__item{
 		height:680px;
+		@include background-cover;
 	}
 	
 }
 
+.main{
+	position: relative;
+	z-index:2;
+}
 .project{
 	background-color: $gray;
 	&__content{
@@ -156,7 +165,7 @@ ul{
 	}
 	&__content{
 		
-		@include margin-custom(60px,0,0,150px);
+		@include margin-custom(60px,0,0,120px);
 	}
 
 	&__heading{
@@ -172,6 +181,12 @@ ul{
 
 	&__btn{
 		@include margin-vertical(0,20px);
+		span{
+			display: block;
+			width: 8px;
+			height: 11px;
+			background:url(../images/sprite.png) no-repeat 0px -64px;
+		}
 		
 	}
 
@@ -181,6 +196,45 @@ ul{
 		span{
 			font-family:$font-family-ofthen;
 			color: $brand-danger;
+		}
+	}
+}
+
+.take-five{
+	@include background-cover;
+	background-image:url(../images/take-five-bg.png);
+	@include padding-vertical(315px,105px);
+	text-align: center;
+	&__term{
+		@include font($font-family-ofthen,18px,$gray-lighter);
+		@include margin-horizontal(100px,0);
+		width: 240px;
+		display: inline-block;
+		vertical-align: top;
+		text-align: left;
+	}
+	&__info{
+		font-size: 15px;
+		color: $gray-base;
+		width: 380px;
+		display: inline-block;
+		vertical-align: top;
+		text-align: left;
+	}
+	&__text{
+		@include margin-vertical(0,25px);
+		position: relative;
+		&:last-child{
+			@include margin-vertical(0,0);
+			&:after{
+				content:"";
+				display: inline-block;
+				height: 33px;
+				width: 155px;
+				position: absolute;
+				@include margin-custom(5px,0,0,22px);
+				background: url(../images/sprite.png) no-repeat -9px -57px;
+			}
 		}
 	}
 }
@@ -213,17 +267,28 @@ ul{
 	}
 	&__item{
 		display: inline-block;
-		@include margin-horizontal(95px,0);
+		vertical-align: top;
+		width: 200px;
+		@include margin-horizontal(42px,0);
 		&:last-child{
 			@include margin-horizontal(0,0);
 		}
 		
 	}
 	&__ico{
-		width:45px;
-		height: 45px;
-		background-color: red;
+		width:44px;
+		height: 37px;
+		background: url(../images/sprite.png)no-repeat 0px 0px;
 		@include margin-custom(0,auto,30px,auto);
+		&--wallet{
+			background-position: -44px 0px;
+		}
+		&--statistic{
+			background-position: -88px 0px;
+		}
+		&--money{
+			background-position: -132px 0px;
+		}
 	}
 	&__number{
 		@include margin-custom(0,auto,30px,auto);
@@ -244,25 +309,54 @@ ul{
 	}
 	&__features{
 		list-style-type: none;
+		@include margin-vertical(0,95px);
 	}
 	&__item{
 		display: inline-block;
 		vertical-align: top;
-		width: 345px;
-		@include margin-horizontal(155px,0);
+		width: 380px;
+		@include margin-custom(0,88px,60px,0);
+		&:nth-child(even){
+			@include margin-horizontal(0,0);
+		}
+
+		&:last-child{
+			@include margin-vertical(0,0);
+		}
+		&:nth-last-child(2){
+			@include margin-vertical(0,0);
+		}
+		
 	}
 	&__ico{
-		width:45px;
-		height: 45px;
-		background-color: red;
-		display: inline-block;
-		vertical-align: top;
-		@include margin-horizontal(33px,0);
+		width:56px;
+		height: 64px;
+		background: url(../images/sprite.png) no-repeat -179px 0px;
+		float:left;
+		@include margin-horizontal(24px,0);
+		&--tablet{
+			background-position: -233px 0px;
+		}
+		&--paper{
+			background-position: -289px 0px;
+		}
+		&--phone{
+			background-position: -344px 0px;
+		}
+		&--building{
+			background-position: -400px 0px;
+		}
+		&--bag{
+			background-position: -457px 0px;
+		}
+		&--scales{
+			background-position: -512px 0px;
+		}
 	}
 	&__info{
-		display: inline-block;
-		vertical-align: top;
 		text-align: left;
+    	width: 300px;
+    	overflow: hidden;
 		&-heading{
 			@include margin-vertical(0,30px);
 		}
@@ -289,6 +383,7 @@ ul{
 			width:430px;
 			display: inline-block;
 			vertical-align: top;
+			text-align: left;
 		}
 		&-heading{
 			@include padding-vertical(0,25px);
@@ -304,18 +399,14 @@ ul{
 			}
 		}
 		&-ico{
-			width: 55px;
-			height:54px;
-			background-color: red;
-			display: inline-block;
-			vertical-align: middle;
 			@include margin-horizontal(30px,0);	
 		}
 		&-text{
-			display: inline-block;
-			vertical-align: middle;
+			overflow: hidden;
 			border-left:3px solid $gray-lighter;
 			width: 340px;
+			color: $brand-info;
+			
 			@include padding-custom(15px,0,16px,45px);
 		}
 	}
@@ -342,12 +433,13 @@ ul{
 		@include margin-vertical(0,80px);
 	}
 	&__features{
-		text-align: left;
+		
 	}
 	&__item{
 		display: inline-block;
 		vertical-align: top;
 		width: 420px;
+		text-align: left;
 		
 		&:nth-child(odd){
 			@include margin-horizontal(95px,0);
@@ -363,7 +455,8 @@ ul{
 		&-heading{
 		display: inline-block;
 		vertical-align: top;
-		@include margin-vertical(0,0);
+		@include margin-vertical(11px,0);
+		font-size: 20px;
 		}
 	}
 	&__header{
@@ -373,8 +466,9 @@ ul{
 		display: inline-block;
 		vertical-align: top;
 		border-bottom:10px solid $gray-lighter;
-		@include margin-custom(0,25px,0,0);
+		@include margin-custom(0,0px,0,0);
 		@include padding-vertical(0,30px);
+		
 	}
 	&__text{
 		font-size: 18px;
@@ -417,20 +511,22 @@ ul{
 		display: inline-block;
 		width: 278px;
 		height: 103px;
-		background-color: $brand-danger;
-		@include padding-vertical(10px,0);
+		background: url(../images/sprite.png) no-repeat -164px -64px;
+		@include padding-custom(17px,35px,0,35px)
 		@include margin-vertical(0,75px);
+		overflow:hidden;
 		&-number{
 			@include font($font-family-ofthen,100px,$brand-info)
 			float:left;
+			@include margin-vertical(-22px,0);
 		}
 		&-text{
 			font-size: 15px;
 			color: $gray-lighter;
 			overflow:hidden;
-			@include margin-vertical(10px,0)
+			// @include margin-vertical(10px,0)
 			span{
-				font-size: $font-family-ofthen;
+				font-family: $font-family-ofthen;
 			}
 		}
 	}
@@ -483,6 +579,7 @@ ul{
 .about{
 	text-align: center;
 	background-color: $gray-dark;
+	@include padding-vertical(0,100px);
 	&__top{
 		display: inline-block;
 		width: 674px;
@@ -500,8 +597,213 @@ ul{
 			display: inline-block;
 			vertical-align: top;
 			@include margin-custom(0,45px,45px,0);
+			color: $brand-info;
+			text-align: left;
 			&:nth-child(even){
 				@include margin-horizontal(0,0);
+			}
+		}
+	}
+	&__photo{
+		&-item{
+			// width: 405px;
+			// height: 605px;
+			display: inline-block;
+			vertical-align: top;
+			@include margin-horizontal(2px,0);
+			
+			&--left{
+				// width: 368px;
+			}
+			&:last-child{
+				@include margin-horizontal(0,0);
+			}
+			
+		}
+		&-top{
+			width: 368px;
+			height: 368px;
+			@include margin-vertical(0,8px);
+			
+			@include background-cover;
+			background-image: url(../images/carousel/3.jpg);
+		}
+		&-bottom{
+			width: 368px;
+			height: 229px;
+			
+			@include background-cover;
+			background-image: url(../images/carousel/2.jpg);
+		}
+		&-right{
+			width: 405px;
+			height: 605px;
+			@include background-cover;
+			background-image: url(../images/carousel/1.jpg);
+		}
+	}
+}
+
+.contact{
+	@include padding-vertical(85px,35px);
+	@include background-cover;
+	background-image: url(../images/contact-bg.png);
+	text-align: center;
+	&__heading{
+		@include margin-vertical(0,60px);
+	}
+	&__form{
+		&-items{
+			@include margin-vertical(0,70px);
+		}
+		&-control{
+			font-size: 19px;
+			background-color: $gray-dark;
+			border:none;
+			color: $gray-darker;
+			border-radius:35px;
+			width: 260px;
+			@include padding-custom(25px,48px,25px,48px);
+			@include margin-horizontal(76px,0);
+			&:last-child{
+				@include margin-horizontal(0,0);
+			};
+			&::-webkit-input-placeholder {color:$gray-darker;};
+			&::-moz-placeholder          {color:$gray-darker;};
+			&:-moz-placeholder           {color:$gray-darker;};
+			&:-ms-input-placeholder      {color:$gray-darker;};
+			&:hover,
+			&:focus{
+				outline:none;
+			};
+		}
+		&-label{
+			display: inline-block;
+			vertical-align: middle;
+			@include margin-vertical(0,70px);
+			&:before{
+				content:"";
+				display: inline-block;
+				vertical-align: middle;
+				width: 84px;
+				height: 84px;
+				background: url(../images/sprite.png) no-repeat -456px -65px;
+				@include margin-horizontal(11px,0);
+			}
+		}
+		&-submit{
+			left:-9999px;
+			position: absolute;
+		}
+	}
+	&__info{
+		&-heading{
+			@include font($font-family-rare,18px,$gray);
+			@include margin-vertical(0,10px);
+		}
+		&-mail{
+			@include font($font-family-ofthen,28px,$gray)
+			text-decoration: none;
+			display: block;
+			@include margin-vertical(0,10px);
+		}
+		&-text{
+			width: 460px;
+			color: $gray;
+			@include margin-custom(0,auto,35px,auto);
+		}
+	}
+	&__social{
+		&-item{
+			@include margin-horizontal(95px,0);
+			&:last-child{
+				@include margin-horizontal(0,0);
+			}
+			background: url(../images/sprite.png) no-repeat;
+			height: 26px;
+			width: 89px;
+			display: inline-block;
+			vertical-align: top;
+			text-decoration: none;
+			&--facebook{
+				background-position: 0px -282px;
+			}
+
+			&--vkontakte{
+				background-position: -91px -282px;
+			}
+
+			&--instagram{
+				background-position: -182px -282px;
+			}
+			&:hover,
+			&:focus{
+				background-position-y: -308px;
+			}
+			
+		}
+	}
+}
+
+.footer{
+	text-align: center;
+	background-color: $gray-dark;
+	@include padding-vertical(0,35px);
+	&__bg{
+		width: 710px;
+		height: 112px;
+		background: url(../images/sprite.png) no-repeat 0px -169px;
+		@include margin-custom(0,auto,75px,auto);
+		position: relative;
+    	top: -12px;
+    	
+	}
+	&__made{
+		@include font($font-family-ofthen,15px,$brand-info);
+		text-transform: lowercase;
+		@include margin-vertical(0,20px);
+		a{
+			text-decoration: none;
+			color: $brand-info;
+		}
+		
+	}
+	&__copywrites{
+		display: inline-block;
+		vertical-align: top;
+		text-align: left;
+		@include margin-horizontal(230px,0);
+	}
+	&__text{
+		font-size: 12px;
+		color: $gray-lighter;
+		
+	}
+	&__logo{
+		display: inline-block;
+		vertical-align: top;
+		width: 180px;
+		height: 41px;
+	}
+}
+
+// RESPONSIVE
+
+@media (min-width:$screen-md){
+	.project{
+		&__content{
+			@include margin-custom(60px,0,0,120px);
+		}
+	}
+
+	.stages{
+		&__number{
+			@include margin-custom(0,25px,0,0);
+		}
+		&__item{
+			&-heading{
+				@include margin-vertical(0,0);
+				font-size: 31px;
 			}
 		}
 	}

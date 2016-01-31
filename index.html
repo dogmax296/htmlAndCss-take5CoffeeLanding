@@ -30,15 +30,9 @@
 							
 						</div>
 						<div class="slideshow__carousel">
-						    <div class="slideshow__item">
-						    	<img class="img-responsive" src="images/carousel/1.jpg" alt="">
-						    </div>
-						    <div class="slideshow__item">
-						    	<img class="img-responsive" src="images/carousel/2.jpg" alt="">
-						    </div>
-						    <div class="slideshow__item">
-						    	<img class="img-responsive" src="images/carousel/3.jpg" alt="">
-						    </div>
+						    <div class="slideshow__item" style="background-image:url(images/carousel/1.jpg)"></div>
+						    <div class="slideshow__item" style="background-image:url(images/carousel/2.jpg)"></div>
+						    <div class="slideshow__item" style="background-image:url(images/carousel/3.jpg)"></div>
 						</div>
 
 					</div>
@@ -46,8 +40,6 @@
 
 			</div>
 			<div class="main">
-				
-					
 					<!-- START project -->
 					<div class="project">
 						<div class="container">
@@ -64,7 +56,9 @@
 										<img src="images/video-thumb.png" alt="Video Thumb" class="img-responsive">
 									</div>
 									<div class="project__info">
-										<a href="#" class="btn btn--small project__btn">1</a>
+										<button href="#" class="btn btn--small project__btn"  data-toggle="modal" data-target="#modal-video">
+											<span></span>
+										</button>
 										<div class="project__text">
 											Смотрите видео<br>
 											с основателем бренда<br>
@@ -77,6 +71,24 @@
 						</div>
 					</div>
 					<!-- END project -->
+					<!-- START take-five -->
+					<div class="take-five">
+						<div class="container">
+							
+							<div class="take-five__term">«Take Five Coffee» — молодой проект небольших кофеен формата to go. </div>
+							<div class="take-five__info">
+								<div class="take-five__text">
+									Название основано на разговорном словосочетании, которое можно перевести как «держи пять». Что символизирует доброжелательные намерения, протягивание руки.
+								</div>
+								<div class="take-five__text">
+									Сочетание названия, кофейного антуража и самого формата to go — три составляющие фактурного и выразительного позиционирования. Подробнее о бренде мы расскажем дальше, а пока — условия шраншизы и цифры.
+								</div>
+							</div>
+
+						</div>
+						
+					</div>
+					<!-- END take-five -->
 					<!-- START finance -->
 					<div class="finance">
 						<div class="container">
@@ -93,17 +105,17 @@
 										<div class="finance__text">Паушальный взнос</div>
 									</li>
 									<li class="finance__item">
-										<div class="finance__ico"></div>
+										<div class="finance__ico finance__ico--wallet"></div>
+										<div class="heading-main heading-main--danger finance__number">1500 €</div>
+										<div class="finance__text">Чистая прибыль в месяц</div>
+									</li>
+									<li class="finance__item">
+										<div class="finance__ico finance__ico--statistic"></div>
 										<div class="heading-main heading-main--danger finance__number">1500 €</div>
 										<div class="finance__text">Паушальный взнос</div>
 									</li>
 									<li class="finance__item">
-										<div class="finance__ico"></div>
-										<div class="heading-main heading-main--danger finance__number">1500 €</div>
-										<div class="finance__text">Паушальный взнос</div>
-									</li>
-									<li class="finance__item">
-										<div class="finance__ico"></div>
+										<div class="finance__ico  finance__ico--money"></div>
 										<div class="heading-main heading-main--danger finance__number">1500 €</div>
 										<div class="finance__text">Паушальный взнос</div>
 									</li>
@@ -126,7 +138,35 @@
 									</div>	
 								</li>
 								<li class="franchise__item">
-									<div class="franchise__ico"></div>
+									<div class="franchise__ico franchise__ico--tablet"></div>
+									<div class="franchise__info">
+										<h4 class="heading-item franchise__info-heading">Фирменный стиль и бренд-бук</h4>
+										<div class="franchise__info-text">Идентификация — важнейший атрибут любого бизнеса</div>
+									</div>	
+								</li>
+								<li class="franchise__item">
+									<div class="franchise__ico franchise__ico--paper"></div>
+									<div class="franchise__info">
+										<h4 class="heading-item franchise__info-heading">Фирменный стиль и бренд-бук</h4>
+										<div class="franchise__info-text">Идентификация — важнейший атрибут любого бизнеса</div>
+									</div>	
+								</li>
+								<li class="franchise__item">
+									<div class="franchise__ico franchise__ico--phone"></div>
+									<div class="franchise__info">
+										<h4 class="heading-item franchise__info-heading">Фирменный стиль и бренд-бук</h4>
+										<div class="franchise__info-text">Идентификация — важнейший атрибут любого бизнеса</div>
+									</div>	
+								</li>
+								<li class="franchise__item">
+									<div class="franchise__ico franchise__ico--building"></div>
+									<div class="franchise__info">
+										<h4 class="heading-item franchise__info-heading">Фирменный стиль и бренд-бук</h4>
+										<div class="franchise__info-text">Идентификация — важнейший атрибут любого бизнеса</div>
+									</div>	
+								</li>
+								<li class="franchise__item">
+									<div class="franchise__ico franchise__ico--bag"></div>
 									<div class="franchise__info">
 										<h4 class="heading-item franchise__info-heading">Фирменный стиль и бренд-бук</h4>
 										<div class="franchise__info-text">Идентификация — важнейший атрибут любого бизнеса</div>
@@ -143,7 +183,7 @@
 										<h4 class="franchise__block-heading--sub">А также сезонных напитках, которые позволит комплектация оборудованием точки.</h4>
 										</div>
 									<div class="franchise__block-item">
-										<div class="franchise__block-ico"></div>
+										<div class="franchise__ico franchise__ico--scales franchise__block-ico"></div>
 										<div class="franchise__block-text">Сбалансированное меню является нашей ключевой целью. Сохраняя бюджетность предлагать гостям интересные напитки</div>
 									</div>
 
@@ -229,7 +269,7 @@
 							<div class="arguments__royalty clearfix">
 								<div class="arguments__royalty-number">0</div>
 								<div class="arguments__royalty-text">
-									Ежемесячное роялти для <span>первых трёх<span> покупателей отсутствует
+									Ежемесячное роялти для <span>первых трёх</span> покупателей отсутствует
 								</div>
 							</div>
 							<ul class="arguments__features">
@@ -283,47 +323,96 @@
 								<div class="about__text-item">Тире́ (фр. tiret, от tirer — растягивать) — один из знаков препинания, применяемый во многих языках. В русскую письменность тире ввёл писатель и историк Н. М. Карамзин[1]. Правила употребления и название этого знака установились не сразу. Он был описан в «Российской грамматике» А. А. Барсова, где был именован «молчанка», затем «черта», а позднее — «знак мыслеотделительный» (в «Сокращённой русской грамматике» А. Х. Востокова)[2].</div>
 								<div class="about__text-item">Тире́ (фр. tiret, от tirer — растягивать) — один из знаков препинания, применяемый во многих языках. В русскую письменность тире ввёл писатель и историк Н. М. Карамзин[1]. Правила употребления и название этого знака установились не сразу. Он был описан в «Российской грамматике» А. А. Барсова, где был именован «молчанка», затем «черта», а позднее — «знак мыслеотделительный» (в «Сокращённой русской грамматике» А. Х. Востокова)[2].</div>
 							</div>
+							<div class="about__photo">
+								<div class="about__photo-item about__photo-item--left">
+									<div class="about__photo-top"></div>
+									<div class="about__photo-bottom"></div>
+								</div>
+								<div class="about__photo-item">
+									<div class="about__photo-right"></div>
+								</div>
+							</div>
 						</div>	
 					</div>
 					<!-- END about -->
 					<!-- START contact -->
 					<div class="contact">
-						<h2 class="contact__heading"></h2>
-						<form class="contact__form" action="">
-							<input type="text">
-							<input type="text">
-							<input type="text">
-							<input type="submit">
-						</form>
-						<div class="contact__info">
-							<div class="contact__info-heading"></div>
-							<a href="" class="contact__info-mail"></a>
-							<div class="contact__info-text"></div>
+						<div class="container">
+							<h2 class="heading-main heading-main--finance contact__heading">Напишите нам и начинаем!</h2>
+							<form class="contact__form" action="">
+								<div class="contact__form-items">
+									<input class="contact__form-control" type="text" placeholder="Как вас зовут">
+									<input class="contact__form-control" type="tel" placeholder="Ваш телефон">
+									<input class="contact__form-control" type="text" placeholder="Ваша эл. почта">
+								</div>
+								<label for="form__submit" class="heading-main heading-main--finance contact__form-label">Поехали!</label>
+								<input type="submit" class="contact__form-submit" id="form__submit" placeholder="Поехали">
+							</form>
+							<div class="contact__info">
+								<h4 class="contact__info-heading">Контактная информация</h4>
+								<a href="" class="contact__info-mail">evgeny.sokolenko@gmail.com</a>
+								<div class="contact__info-text">Тире́ (фр. tiret, от tirer — растягивать) — один из знаков препинания, применяемый во многих языках. В русскую письменность тире ввёл писатель и историк Н. М. Карамзин[1].</div>
+							</div>
+							<div class="contact__social">
+								<a href="#" class="contact__social-item contact__social-item--facebook"></a>
+								<a href="#" class="contact__social-item contact__social-item--vkontakte"></a>
+								<a href="#" class="contact__social-item contact__social-item--instagram"></a>
+							</div>
 						</div>
 					</div>
 					<!-- END contact -->
+					
+						
+						
+
+					
 				
 			</div>
 			<div class="footer">
-				
-					<div class="footer__copywrites">
-						<div class="footer__text"></div>
-						<div class="footer__logo">
-							<img src="" alt="LOGO" class="footer__logo-item">
-							<div class="footer__logo-text"></div>
-						</div>
-						<div class="footer__made"></div>
 
+				<div class="container">
+
+					<div class="footer__bg"></div>
+
+					<div class="footer__info">
+						<div class="footer__copywrites">
+							<div class="footer__made">made by <a href="http://ssncreativegroup.com/" title="SSN Design Creative Group">ssn creative group</a></div>
+							<div class="footer__text">
+								«Take 5 Coffee» является зарегистрированной торговой маркой.<br>&#169; All rights reserved 2016</div>
+						</div>
+						<div class="footer__logo">
+							<img src="images/logo-footer.png" alt="LOGO" class="img-responsive">
+						</div>
 					</div>
-				
+
+				</div>	
 			</div>
 		</div>
+
+		<!-- <div class="modal-video modal fade" id="modal-video" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					
+					<span aria-hidden="true">&times;</span>
+
+					<div class="modal-video__item">
+						<iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/VufilzHKTqk?html5=1" frameborder="0" allowfullscreen></iframe>
+					</div>
+
+				</button>
+						 
+			</div>
+		</div> -->
 
 		<!-- JQUERY -->
 		<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
 		<!-- OWL CAROUSEL -->
 		<script src="script/owl.carousel.min.js"></script>
-		<!-- OWL CAROUSEL -->
+		<!-- Modal JS -->
+		<script src="script/modal.js"></script>
+		<!-- Main JS -->
+		<script src="script/transition.js"></script>
+		<!-- Main JS -->
 		<script src="script/main.js"></script>
 	</body>
 
