@@ -440,10 +440,51 @@ ul{
 		vertical-align: top;
 		width: 420px;
 		text-align: left;
+		position: relative;
+		
+		&:nth-child(4n+1){
+			&:after{
+				content:"";
+				display: inline-block;
+				position: absolute;
+				top: 51%;
+    			right: -72px;
+				width: 56px;
+				height: 5px;
+				background: url(../images/sprite.png) no-repeat 0px -93px;
+			}	
+		}
+
+		&:nth-child(4n+2){
+			&:before{
+				content:"";
+				display: inline-block;
+				position: absolute;
+				bottom: -17%;
+			    left: -113px;
+			    width: 99px;
+			    height: 7px;
+			    background: url(../images/sprite.png) no-repeat 0px -100px;
+			    transform: rotate(-45deg);
+			}	
+		}
+
+		&:nth-child(4n+3){
+			&:after{
+				content:"";
+				display: inline-block;
+				position: absolute;
+				top: 51%;
+    			right: -72px;
+				width: 56px;
+				height: 5px;
+				background: url(../images/sprite.png) no-repeat 0px -93px;
+				transform: rotate(180deg);
+			}	
+		}
 		
 		&:nth-child(odd){
 			@include margin-horizontal(95px,0);
-			
 		}
 		&:last-child{
 			@include margin-vertical(0,0);
@@ -786,6 +827,8 @@ ul{
 		height: 41px;
 	}
 }
+
+
 
 // RESPONSIVE
 

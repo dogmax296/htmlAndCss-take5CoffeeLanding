@@ -5,6 +5,8 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Coffee</title>
+		<!-- MAGNIFIC POPUP --> 
+		<link rel="stylesheet" href="css/magnific-popup.css">
 		<!-- CSS -->
 		<link rel="stylesheet" href="css/style.css">
 	</head>
@@ -56,9 +58,10 @@
 										<img src="images/video-thumb.png" alt="Video Thumb" class="img-responsive">
 									</div>
 									<div class="project__info">
-										<button href="#" class="btn btn--small project__btn"  data-toggle="modal" data-target="#modal-video">
+							
+										<a  href="https://vimeo.com/51591447" class="btn btn--small project__btn" >
 											<span></span>
-										</button>
+										</a>
 										<div class="project__text">
 											Смотрите видео<br>
 											с основателем бренда<br>
@@ -243,6 +246,20 @@
 									</div>
 									<div class="stages__text">Сбалансированное меню являетсянашей ключевой целью. Сохраняя бюджетность предлагать гостям интересные напитки</div>
 								</li>
+								<li class="stages__item">
+									<div class="stages__header">
+										<h3 class="heading-main heading-main--step stages__number">Шаг 1.</h3>
+										<h4 class="heading-stage stages__item-heading">Заявка<br>и знакомство</h4>
+									</div>
+									<div class="stages__text">Сбалансированное меню являетсянашей ключевой целью. Сохраняя бюджетность предлагать гостям интересные напитки</div>
+								</li>
+								<li class="stages__item">
+									<div class="stages__header">
+										<h3 class="heading-main heading-main--step stages__number">Шаг 1.</h3>
+										<h4 class="heading-stage stages__item-heading">Заявка<br>и знакомство</h4>
+									</div>
+									<div class="stages__text">Сбалансированное меню являетсянашей ключевой целью. Сохраняя бюджетность предлагать гостям интересные напитки</div>
+								</li>
 							</ul>
 						</div>
 					</div>
@@ -339,15 +356,17 @@
 					<div class="contact">
 						<div class="container">
 							<h2 class="heading-main heading-main--finance contact__heading">Напишите нам и начинаем!</h2>
-							<form class="contact__form" action="">
+							<form method="POST" class="contact__form" id="form">
 								<div class="contact__form-items">
-									<input class="contact__form-control" type="text" placeholder="Как вас зовут">
-									<input class="contact__form-control" type="tel" placeholder="Ваш телефон">
-									<input class="contact__form-control" type="text" placeholder="Ваша эл. почта">
+									<input name="name" class="contact__form-control" type="text" placeholder="Как вас зовут" required>
+									<input name="phone" class="contact__form-control" type="text" placeholder="Ваш телефон" required>
+									<input name="email" class="contact__form-control" type="email" placeholder="Ваша эл. почта" required>
 								</div>
 								<label for="form__submit" class="heading-main heading-main--finance contact__form-label">Поехали!</label>
-								<input type="submit" class="contact__form-submit" id="form__submit" placeholder="Поехали">
+								<input type="submit" class="contact__form-submit" id="form__submit" placeholder="ПОЕХАЛИ">
+								<div class="messages"></div>
 							</form>
+
 							<div class="contact__info">
 								<h4 class="contact__info-heading">Контактная информация</h4>
 								<a href="" class="contact__info-mail">evgeny.sokolenko@gmail.com</a>
@@ -360,13 +379,7 @@
 							</div>
 						</div>
 					</div>
-					<!-- END contact -->
-					
-						
-						
-
-					
-				
+					<!-- END contact -->	
 			</div>
 			<div class="footer">
 
@@ -389,31 +402,18 @@
 			</div>
 		</div>
 
-		<!-- <div class="modal-video modal fade" id="modal-video" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-			<div class="modal-dialog" role="document">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					
-					<span aria-hidden="true">&times;</span>
-
-					<div class="modal-video__item">
-						<iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/VufilzHKTqk?html5=1" frameborder="0" allowfullscreen></iframe>
-					</div>
-
-				</button>
-						 
-			</div>
-		</div> -->
+		
 
 		<!-- JQUERY -->
 		<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
 		<!-- OWL CAROUSEL -->
 		<script src="script/owl.carousel.min.js"></script>
-		<!-- Modal JS -->
-		<script src="script/modal.js"></script>
+		<!-- Magnific JS -->
+		<script src="script/jquery.magnific-popup.min.js"></script>
+		<!-- Mail JS -->
+		<script src="script/mail.js"></script>
 		<!-- Main JS -->
-		<script src="script/transition.js"></script>
-		<!-- Main JS -->
-		<script src="script/main.js"></script>
+		<script src="script/main.js"></script> 
 	</body>
 
 </html>
