@@ -4,7 +4,7 @@
 
 @import "font.scss";
 @import "owl-carousel.scss";
-
+@import "magnific-popup.scss";
 
 html{
 	font-family: $font-family-main,Helvetica, sans-serif;
@@ -22,10 +22,39 @@ ul{
 	@include margin-vertical(0,0);
 }
 
-.clearfix{
-	clear:both;
+h1, h2, h3, h4, h5, h6 {
+
+font-weight: normal;
+@include margin-custom (0,0,0,0);
+
 }
 
+a, button{
+	outline:none;
+	&:hover,
+	&:focus{
+		outline:none;
+	}
+}
+
+.clearfix{
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+.hide{
+	left:-9999px;
+	position: absolute;	
+}
+.hidden-text{
+	color: transparent;
+}
 .wrapper{
 	min-width:$screen-min-width;
 }
@@ -54,7 +83,9 @@ ul{
 		}
 	}
 	&-item{
+		
 		@include font($font-family-main,27px,$brand-info);
+		
 		&--big{
 			font-size:36px;
 		}
@@ -63,6 +94,7 @@ ul{
 		@include font($font-family-rare,31px,$brand-info);
 	}
 	&-term{
+		
 		@include font($font-family-main,85px,$brand-danger);
 	}
 	
@@ -73,10 +105,10 @@ ul{
 	text-decoration: none;
 	background-color: transparent;
 	@include font($font-family-rare,20px,$brand-info)
-	border:3px solid;
+	border:3px solid $brand-info;
 	border-radius:35px;
 	box-shadow:none;
-	@include padding-custom(26px,26px,26px,26px);
+	@include padding-custom(20px,27px,18px,27px);
 	transition-duration: 0.4s;
 	transition-property: color, background-color,border-color;
 	&:hover,
@@ -99,13 +131,7 @@ ul{
 		border:1px solid;
 		@include padding-custom(3px,9px,3px,12px);
 	}
-	&--social{
-		font-size: 8px;
-		background-color: $gray-dark;
-		color: transparent;
-		border:none;
-		@include padding-custom(9px,9px,7px,9px);
-	}
+	
 }
 .img{
 	&-responsive{
@@ -128,6 +154,7 @@ ul{
 .logo{
 	width: 183px;
 	height: 42px;
+	display: block;
 	&--header{
 		@include margin-vertical(0,28px);
 	}
@@ -202,7 +229,7 @@ ul{
 
 .take-five{
 	@include background-cover;
-	background-image:url(../images/take-five-bg.png);
+	background-image:url(../images/take-five-bg.jpg);
 	@include padding-vertical(315px,105px);
 	text-align: center;
 	&__term{
@@ -263,13 +290,14 @@ ul{
 	}
 	&__features{
 		list-style-type: none;
+		font-size: 0;
 		
 	}
 	&__item{
 		display: inline-block;
 		vertical-align: top;
-		width: 200px;
-		@include margin-horizontal(42px,0);
+		width: 208px;
+		@include margin-horizontal(36px,0);
 		&:last-child{
 			@include margin-horizontal(0,0);
 		}
@@ -309,13 +337,14 @@ ul{
 	}
 	&__features{
 		list-style-type: none;
+		font-size: 0;
 		@include margin-vertical(0,95px);
 	}
 	&__item{
 		display: inline-block;
 		vertical-align: top;
 		width: 380px;
-		@include margin-custom(0,88px,60px,0);
+		@include margin-custom(0,92px,60px,0);
 		&:nth-child(even){
 			@include margin-horizontal(0,0);
 		}
@@ -325,6 +354,11 @@ ul{
 		}
 		&:nth-last-child(2){
 			@include margin-vertical(0,0);
+		}
+
+		&-break{
+			font-size: 27px;
+			color: transparent;
 		}
 		
 	}
@@ -373,14 +407,13 @@ ul{
 			height: 370px;
 			width: 370px;
 			@include background-cover;
-			background-image:url(../images/carousel/1.jpg);
 			border-radius:50%;
 			display: inline-block;
 			vertical-align: top;
 			@include margin-horizontal(105px,0);	
 		}
 		&-info{
-			width:430px;
+			width: 430px;
 			display: inline-block;
 			vertical-align: top;
 			text-align: left;
@@ -416,12 +449,11 @@ ul{
 	&--middle{
 		height: 685px;
 		@include background-cover;
-		background-image:url(../images/carousel/2.jpg);
 	}
 	&--bottom{
 		height: 600px;
 		@include background-cover;
-		background-image:url(../images/carousel/3.jpg);
+		
 	}
 }
 
@@ -433,58 +465,58 @@ ul{
 		@include margin-vertical(0,80px);
 	}
 	&__features{
-		
+		font-size: 0;
 	}
 	&__item{
 		display: inline-block;
 		vertical-align: top;
-		width: 420px;
+		width: 450px;
 		text-align: left;
 		position: relative;
 		
-		&:nth-child(4n+1){
-			&:after{
-				content:"";
-				display: inline-block;
-				position: absolute;
-				top: 51%;
-    			right: -72px;
-				width: 56px;
-				height: 5px;
-				background: url(../images/sprite.png) no-repeat 0px -93px;
-			}	
-		}
+		// &:nth-child(4n+1){
+		// 	&:after{
+		// 		content:"";
+		// 		display: inline-block;
+		// 		position: absolute;
+		// 		top: 36%;
+  //   			right: -29px;
+		// 		width: 56px;
+		// 		height: 5px;
+		// 		background: url(../images/sprite.png) no-repeat 0px -93px;
+		// 	}	
+		// }
 
-		&:nth-child(4n+2){
-			&:before{
-				content:"";
-				display: inline-block;
-				position: absolute;
-				bottom: -17%;
-			    left: -113px;
-			    width: 99px;
-			    height: 7px;
-			    background: url(../images/sprite.png) no-repeat 0px -100px;
-			    transform: rotate(-45deg);
-			}	
-		}
+		// &:nth-child(4n+2){
+		// 	&:before{
+		// 		content:"";
+		// 		display: inline-block;
+		// 		position: absolute;
+		// 		bottom: -65%;
+  //   			left: -71px;
+		// 	    width: 99px;
+		// 	    height: 7px;
+		// 	    background: url(../images/sprite.png) no-repeat 0px -100px;
+		// 	    transform: rotate(-45deg);
+		// 	}	
+		// }
 
-		&:nth-child(4n+3){
-			&:after{
-				content:"";
-				display: inline-block;
-				position: absolute;
-				top: 51%;
-    			right: -72px;
-				width: 56px;
-				height: 5px;
-				background: url(../images/sprite.png) no-repeat 0px -93px;
-				transform: rotate(180deg);
-			}	
-		}
+		// &:nth-child(4n+3){
+		// 	&:after{
+		// 		content:"";
+		// 		display: inline-block;
+		// 		position: absolute;
+		// 		top: 39%;
+  //   			right: -22px;
+		// 		width: 56px;
+		// 		height: 5px;
+		// 		background: url(../images/sprite.png) no-repeat 0px -93px;
+		// 		transform: rotate(180deg);
+		// 	}	
+		// }
 		
 		&:nth-child(odd){
-			@include margin-horizontal(95px,0);
+			@include margin-horizontal(40px,0);
 		}
 		&:last-child{
 			@include margin-vertical(0,0);
@@ -494,21 +526,28 @@ ul{
 		}
 		@include margin-custom(0,0,80px,0);
 		&-heading{
-		display: inline-block;
-		vertical-align: top;
-		@include margin-vertical(11px,0);
-		font-size: 20px;
+		display: block;
+		overflow:hidden;
+		@include margin-vertical(8px,0);
+		font-size: 31px;
 		}
 	}
 	&__header{
-		@include margin-vertical(0,30px);
+		@include margin-vertical(0,22px);
+		font-size: 0;
+		
 	}
 	&__number{
-		display: inline-block;
-		vertical-align: top;
-		border-bottom:10px solid $gray-lighter;
-		@include margin-custom(0,0px,0,0);
-		@include padding-vertical(0,30px);
+		float:left;
+		@include margin-custom(0,25px,0,0);
+		&:after{
+			content:"";
+			display: block;
+			width: 195px;
+			height: 10px;
+			@include margin-vertical(11px,0);
+			background-color: $gray-lighter;
+		}
 		
 	}
 	&__text{
@@ -521,20 +560,17 @@ ul{
 	@include background-cover;
 	background-image:url(../images/term-bg.png);
 	@include padding-vertical(135px,85px);
+	font-size: 0;
 	&__heading{
 		@include margin-vertical(0,25px);
 		display: inline-block;
 	}
-	&__number{
-		@include font($font-family-ofthen,243px,$gray-lighter);
-		display: inline-block;
-		vertical-align: middle;
-		@include margin-horizontal(219px,150px);
-	}
+	
 	&__info{
 		display: inline-block;
 		vertical-align: middle;
 		width:270px;
+		@include margin-horizontal(0,685px)
 		
 	}
 	&__text{
@@ -548,6 +584,9 @@ ul{
 	background-color:$gray-dark;
 	@include padding-vertical(80px,80px);
 	text-align: center;
+	&__heading{
+		@include margin-vertical(0,30px);
+	}
 	&__royalty{
 		display: inline-block;
 		width: 278px;
@@ -640,6 +679,7 @@ ul{
 			@include margin-custom(0,45px,45px,0);
 			color: $brand-info;
 			text-align: left;
+			font-size: 15px;
 			&:nth-child(even){
 				@include margin-horizontal(0,0);
 			}
@@ -665,22 +705,17 @@ ul{
 			width: 368px;
 			height: 368px;
 			@include margin-vertical(0,8px);
-			
 			@include background-cover;
-			background-image: url(../images/carousel/3.jpg);
 		}
 		&-bottom{
 			width: 368px;
 			height: 229px;
-			
 			@include background-cover;
-			background-image: url(../images/carousel/2.jpg);
 		}
 		&-right{
 			width: 405px;
 			height: 605px;
 			@include background-cover;
-			background-image: url(../images/carousel/1.jpg);
 		}
 	}
 }
@@ -688,7 +723,7 @@ ul{
 .contact{
 	@include padding-vertical(85px,35px);
 	@include background-cover;
-	background-image: url(../images/contact-bg.png);
+	background-image: url(../images/contact-bg.jpg);
 	text-align: center;
 	&__heading{
 		@include margin-vertical(0,60px);
@@ -732,10 +767,7 @@ ul{
 				@include margin-horizontal(11px,0);
 			}
 		}
-		&-submit{
-			left:-9999px;
-			position: absolute;
-		}
+		
 	}
 	&__info{
 		&-heading{
@@ -768,20 +800,71 @@ ul{
 			text-decoration: none;
 			&--facebook{
 				background-position: 0px -282px;
+				&:hover,
+				&:focus{
+				background-position: 0px -308px;	
+				}
 			}
 
 			&--vkontakte{
 				background-position: -91px -282px;
+				&:hover,
+				&:focus{
+				background-position: -91px -308px;	
+				}
 			}
 
 			&--instagram{
 				background-position: -182px -282px;
-			}
-			&:hover,
-			&:focus{
-				background-position-y: -308px;
+				&:hover,
+				&:focus{
+				background-position: -182px -308px;	
+				}
 			}
 			
+			
+		}
+	}
+	&__popup{
+		background-color: $gray-dark;
+		border-radius:10px;
+		width: 555px;
+		@include padding-custom(110px,65px,60px,65px);
+		position: relative;
+		@include margin-custom(0,auto,0,auto)
+		text-align: center;
+		&-text{
+			font-size: 24px;
+			color: $brand-info;
+			@include margin-vertical(0,60px);
+			text-align: right;
+			span{
+				color: $brand-danger;
+				
+			}
+		}
+		&-btn{
+			position: static;
+			width:auto;
+			height: auto;
+			line-height:inherit;
+			opacity:1!important;
+			display: inline-block!important;
+			text-decoration: none;
+			background-color: transparent!important;
+			@include font($font-family-rare!important,20px!important,$brand-info!important)
+			border:3px solid $brand-info!important;
+			border-radius:35px;
+			box-shadow:none;
+			@include padding-custom(20px!important,27px!important,18px!important,27px!important);
+			transition-duration: 0.4s;
+			transition-property: color, background-color,border-color;
+			&:hover,
+			&:focus{
+				background-color: $brand-info!important;
+				color: $gray-lighter!important;
+				border-color:$brand-info!important;
+			}
 		}
 	}
 }
@@ -790,6 +873,7 @@ ul{
 	text-align: center;
 	background-color: $gray-dark;
 	@include padding-vertical(0,35px);
+	overflow:hidden;
 	&__bg{
 		width: 710px;
 		height: 112px;
@@ -823,31 +907,41 @@ ul{
 	&__logo{
 		display: inline-block;
 		vertical-align: top;
-		width: 180px;
-		height: 41px;
+		width: 200px;
+		height: 71px;
 	}
 }
 
-
-
-// RESPONSIVE
-
-@media (min-width:$screen-md){
-	.project{
-		&__content{
-			@include margin-custom(60px,0,0,120px);
-		}
-	}
-
-	.stages{
-		&__number{
-			@include margin-custom(0,25px,0,0);
-		}
-		&__item{
-			&-heading{
-				@include margin-vertical(0,0);
-				font-size: 31px;
-			}
-		}
-	}
+// FORM POPUP
+.mfp-zoom-in {
+  /* start state */
+  .mfp-with-anim {
+    opacity: 0;
+    transition: all 0.2s ease-in-out; 
+    transform: scale(0.8); 
+  }
+  &.mfp-bg {
+    opacity: 0;
+	  transition: all 0.3s ease-out;
+  }
+  /* animate in */
+  &.mfp-ready {
+    .mfp-with-anim {
+      opacity: 1;
+      transform: scale(1); 
+    }
+    &.mfp-bg {
+      opacity: 0.8;
+    }
+  }
+  /* animate out */
+  &.mfp-removing {
+    .mfp-with-anim {
+      transform: scale(0.8); 
+      opacity: 0;
+    }
+    &.mfp-bg {
+      opacity: 0;
+    }
+  }
 }
