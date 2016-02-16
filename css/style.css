@@ -1004,7 +1004,7 @@ a:hover, a:focus, button:hover, button:focus {
 }
 
 .heading-main--danger {
-  color: #cb5e54;
+  color: #e85e53;
 }
 
 .heading-main--info {
@@ -1013,7 +1013,7 @@ a:hover, a:focus, button:hover, button:focus {
 
 .heading-main--step {
   font-size: 64px;
-  color: #cb5e54;
+  color: #e85e53;
 }
 
 .heading-main--finance {
@@ -1039,7 +1039,7 @@ a:hover, a:focus, button:hover, button:focus {
 .heading-term {
   font-family: "pn-regular";
   font-size: 85px;
-  color: #cb5e54;
+  color: #e85e53;
 }
 
 .btn {
@@ -1070,12 +1070,12 @@ a:hover, a:focus, button:hover, button:focus {
 
 .btn--danger {
   color: #ffffff;
-  border-color: #cb5e54;
+  border-color: #e85e53;
 }
 
 .btn--danger:hover, .btn--danger:focus {
-  background-color: #cb5e54;
-  border-color: #cb5e54;
+  background-color: #e85e53;
+  border-color: #e85e53;
 }
 
 .btn--small {
@@ -1127,6 +1127,10 @@ a:hover, a:focus, button:hover, button:focus {
   background-size: cover;
 }
 
+.slideshow__item--sketch {
+  height: 532px;
+}
+
 .main {
   position: relative;
   z-index: 2;
@@ -1171,7 +1175,7 @@ a:hover, a:focus, button:hover, button:focus {
 
 .project__btn {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 11px;
 }
 
 .project__btn span {
@@ -1188,7 +1192,7 @@ a:hover, a:focus, button:hover, button:focus {
 
 .project__text span {
   font-family: "pn-bold";
-  color: #cb5e54;
+  color: #e85e53;
 }
 
 .take-five {
@@ -1252,12 +1256,12 @@ a:hover, a:focus, button:hover, button:focus {
 
 .finance__heading--main {
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .finance__heading--sub {
   margin-top: 0;
-  margin-bottom: 55px;
+  margin-bottom: 35px;
 }
 
 .finance__content {
@@ -1265,14 +1269,27 @@ a:hover, a:focus, button:hover, button:focus {
   padding-bottom: 72px;
 }
 
-.finance__info {
-  width: 460px;
+.finance__images {
   margin-top: 0;
-  margin-bottom: 95px;
-  color: #ffffff;
-  font-size: 15px;
+  margin-right: auto;
+  margin-bottom: 55px;
+  margin-left: auto;
+  font-size: 0;
+}
+
+.finance__img {
+  width: 250px;
+  height: 190px;
   display: inline-block;
-  text-align: left;
+  vertical-align: top;
+  margin-right: 180px;
+  margin-left: 0;
+  box-shadow: -4px 4px 10px #000;
+}
+
+.finance__img:last-child {
+  margin-right: 0;
+  margin-left: 0;
 }
 
 .finance__features {
@@ -1585,10 +1602,11 @@ a:hover, a:focus, button:hover, button:focus {
 .term {
   background: no-repeat center center;
   background-size: cover;
-  background-image: url(../images/term-bg.png);
   padding-top: 135px;
   padding-bottom: 85px;
   font-size: 0;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/term-bg.png', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/term-bg.png', sizingMethod='scale')";
 }
 
 .term__heading {
@@ -1599,10 +1617,24 @@ a:hover, a:focus, button:hover, button:focus {
 
 .term__info {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
   width: 270px;
   margin-right: 0;
-  margin-left: 685px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-left: 225px;
+}
+
+.term__number {
+  font-family: "pn-bold";
+  font-size: 244px;
+  color: #ffffff;
+  display: inline-block;
+  vertical-align: top;
+  width: 300px;
+  text-align: center;
+  margin-right: 0;
+  margin-left: 144px;
 }
 
 .term__text {
@@ -1704,7 +1736,7 @@ a:hover, a:focus, button:hover, button:focus {
   display: inline-block;
   width: 3px;
   height: 60px;
-  background-color: #cb5e54;
+  background-color: #e85e53;
   margin-top: 0;
   margin-bottom: 40px;
 }
@@ -1712,6 +1744,57 @@ a:hover, a:focus, button:hover, button:focus {
 .arguments__cta-heading {
   margin-top: 0;
   margin-bottom: 65px;
+}
+
+.attributes {
+  background-color: #ebe6dd;
+  padding-top: 85px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.attributes__heading {
+  margin-top: 0;
+  margin-bottom: 75px;
+}
+
+.attributes__options {
+  font-size: 0;
+}
+
+.attributes__item {
+  display: inline-block;
+  vertical-align: top;
+  width: 295px;
+  margin-right: 25px;
+  margin-left: 0;
+}
+
+.attributes__item:last-child {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.attributes__item--left {
+  text-align: left;
+}
+
+.attributes__item--center {
+  text-align: center;
+}
+
+.attributes__item--right {
+  text-align: right;
+}
+
+.attributes__item-heading {
+  font-size: 27px;
+  color: #253e55;
+}
+
+.attributes__item-line {
+  margin-top: 50px;
+  margin-bottom: 40px;
 }
 
 .about {
@@ -1722,12 +1805,14 @@ a:hover, a:focus, button:hover, button:focus {
 }
 
 .about__top {
+  background: no-repeat center center;
+  background-size: cover;
   display: inline-block;
-  width: 674px;
-  height: 523px;
-  background-image: url(../images/brand-bg.png);
+  vertical-align: top;
+  width: 625px;
+  height: 421px;
   margin-top: 0;
-  margin-bottom: 105px;
+  margin-bottom: 45px;
 }
 
 .about__heading {
@@ -1807,6 +1892,11 @@ a:hover, a:focus, button:hover, button:focus {
   margin-bottom: 60px;
 }
 
+.contact__heading--popup {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
 .contact__form-items {
   margin-top: 0;
   margin-bottom: 70px;
@@ -1824,6 +1914,17 @@ a:hover, a:focus, button:hover, button:focus {
   padding-bottom: 25px;
   padding-left: 48px;
   margin-right: 76px;
+  margin-left: 0;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+}
+
+.contact__form-control--popup {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 25px;
   margin-left: 0;
 }
 
@@ -1850,6 +1951,7 @@ a:hover, a:focus, button:hover, button:focus {
 
 .contact__form-control:hover, .contact__form-control:focus {
   outline: none;
+  background-color: #ebe6dd;
 }
 
 .contact__form-label {
@@ -1857,6 +1959,20 @@ a:hover, a:focus, button:hover, button:focus {
   vertical-align: middle;
   margin-top: 0;
   margin-bottom: 70px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  -webkit-transition-property: color;
+  transition-property: color;
+}
+
+.contact__form-label--popup {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.contact__form-label:hover, .contact__form-label:focus {
+  color: #ffffff;
 }
 
 .contact__form-label:before {
@@ -1893,7 +2009,7 @@ a:hover, a:focus, button:hover, button:focus {
   color: #e9e4db;
   margin-top: 0;
   margin-right: auto;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
   margin-left: auto;
 }
 
@@ -1938,7 +2054,7 @@ a:hover, a:focus, button:hover, button:focus {
 }
 
 .contact__popup {
-  background-color: #ebe6dd;
+  background: #ebe6dd;
   border-radius: 10px;
   width: 555px;
   padding-top: 110px;
@@ -1953,6 +2069,17 @@ a:hover, a:focus, button:hover, button:focus {
   text-align: center;
 }
 
+.contact__popup--submit {
+  background: no-repeat center center;
+  background-size: cover;
+  background-image: url(../images/contact-bg.jpg);
+  padding-top: 65px;
+}
+
+.contact__popup--submit .mfp-close {
+  color: #e9e4db;
+}
+
 .contact__popup-text {
   font-size: 24px;
   color: #253e55;
@@ -1962,7 +2089,7 @@ a:hover, a:focus, button:hover, button:focus {
 }
 
 .contact__popup-text span {
-  color: #cb5e54;
+  color: #e85e53;
 }
 
 .contact__popup-btn {
@@ -2040,7 +2167,7 @@ a:hover, a:focus, button:hover, button:focus {
 
 .footer__text {
   font-size: 12px;
-  color: #ffffff;
+  color: #253e55;
 }
 
 .footer__logo {

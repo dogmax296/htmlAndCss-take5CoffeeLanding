@@ -1,7 +1,6 @@
 @import "bootstrap.scss";
 @import "variables.scss";
 @import "mixins.scss";
-
 @import "font.scss";
 @import "owl-carousel.scss";
 @import "magnific-popup.scss";
@@ -170,8 +169,10 @@ a, button{
 	&__item{
 		height:680px;
 		@include background-cover;
-	}
-	
+		&--sketch{
+			height: 532px;
+		}
+	}	
 }
 
 .main{
@@ -207,7 +208,7 @@ a, button{
 	}
 
 	&__btn{
-		@include margin-vertical(0,20px);
+		@include margin-vertical(0,11px);
 		span{
 			display: block;
 			width: 8px;
@@ -271,22 +272,29 @@ a, button{
 	text-align: center;
 	&__heading{
 		&--main{
-			@include margin-vertical(0,30px);
+			@include margin-vertical(0,10px);
 		}
 		&--sub{
-			@include margin-vertical(0,55px);
+			@include margin-vertical(0,35px);
 		}
 	}
 	&__content{
 		@include padding-vertical(80px,72px);
 	}
-	&__info{
-		width: 460px;
-		@include margin-vertical(0,95px);
-		color: $gray-lighter;
-		font-size: 15px;
+	&__images{
+		@include margin-custom(0,auto,55px,auto);
+		font-size: 0;
+	}
+	&__img{
+		width: 250px;
+		height: 190px;
 		display: inline-block;
-		text-align: left;
+		vertical-align: top;
+		@include margin-horizontal(180px,0);
+		box-shadow: -4px 4px 10px #000;
+		&:last-child{
+			@include margin-horizontal(0,0);
+		}
 	}
 	&__features{
 		list-style-type: none;
@@ -474,47 +482,6 @@ a, button{
 		text-align: left;
 		position: relative;
 		
-		// &:nth-child(4n+1){
-		// 	&:after{
-		// 		content:"";
-		// 		display: inline-block;
-		// 		position: absolute;
-		// 		top: 36%;
-  //   			right: -29px;
-		// 		width: 56px;
-		// 		height: 5px;
-		// 		background: url(../images/sprite.png) no-repeat 0px -93px;
-		// 	}	
-		// }
-
-		// &:nth-child(4n+2){
-		// 	&:before{
-		// 		content:"";
-		// 		display: inline-block;
-		// 		position: absolute;
-		// 		bottom: -65%;
-  //   			left: -71px;
-		// 	    width: 99px;
-		// 	    height: 7px;
-		// 	    background: url(../images/sprite.png) no-repeat 0px -100px;
-		// 	    transform: rotate(-45deg);
-		// 	}	
-		// }
-
-		// &:nth-child(4n+3){
-		// 	&:after{
-		// 		content:"";
-		// 		display: inline-block;
-		// 		position: absolute;
-		// 		top: 39%;
-  //   			right: -22px;
-		// 		width: 56px;
-		// 		height: 5px;
-		// 		background: url(../images/sprite.png) no-repeat 0px -93px;
-		// 		transform: rotate(180deg);
-		// 	}	
-		// }
-		
 		&:nth-child(odd){
 			@include margin-horizontal(40px,0);
 		}
@@ -558,9 +525,10 @@ a, button{
 
 .term{
 	@include background-cover;
-	background-image:url(../images/term-bg.png);
 	@include padding-vertical(135px,85px);
 	font-size: 0;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/term-bg.png', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/term-bg.png', sizingMethod='scale')";
 	&__heading{
 		@include margin-vertical(0,25px);
 		display: inline-block;
@@ -568,15 +536,25 @@ a, button{
 	
 	&__info{
 		display: inline-block;
-		vertical-align: middle;
+		vertical-align: top;
 		width:270px;
-		@include margin-horizontal(0,685px)
+		@include margin-horizontal(0,0)
+		@include margin-horizontal(0,225px);
 		
+	}
+	&__number{
+		@include font($font-family-ofthen,244px,$gray-lighter);
+		display: inline-block;
+		vertical-align: top;
+		width: 300px;
+		text-align: center;
+		@include margin-horizontal(0,144px);
 	}
 	&__text{
 		color: $gray;
 		font-size: 18px;
 		@include margin-vertical(0,40px);
+		
 	}
 }
 
@@ -604,7 +582,6 @@ a, button{
 			font-size: 15px;
 			color: $gray-lighter;
 			overflow:hidden;
-			// @include margin-vertical(10px,0)
 			span{
 				font-family: $font-family-ofthen;
 			}
@@ -655,17 +632,53 @@ a, button{
 		}
 	}
 }
-
+.attributes{
+	background-color: $gray-dark;
+	@include padding-vertical(85px,80px);
+	text-align: center;
+	&__heading{
+		@include margin-vertical(0,75px)
+	}
+	&__options{
+		font-size: 0;
+	}
+	&__item{
+		display: inline-block;
+		vertical-align: top;
+		width: 295px;
+		@include margin-horizontal(25px,0);
+		&:last-child{
+			@include margin-horizontal(0,0);
+		}
+		&--left{
+			text-align: left;
+		}
+		&--center{
+			text-align: center;
+		}
+		&--right{
+			text-align: right;
+		}
+		&-heading{
+			font-size: 27px;
+			color: $brand-info;
+		}
+		&-line{
+			@include margin-vertical(50px,40px);
+		}
+	}
+}
 .about{
 	text-align: center;
 	background-color: $gray-dark;
 	@include padding-vertical(0,100px);
 	&__top{
+		@include background-cover;
 		display: inline-block;
-		width: 674px;
-		height: 523px;
-		background-image: url(../images/brand-bg.png);
-		@include margin-vertical(0,105px);
+		vertical-align: top;
+		width: 625px;
+		height: 421px;
+		@include margin-vertical(0,45px);
 	}
 	&__heading{
 		@include margin-vertical(0,75px);
@@ -687,15 +700,9 @@ a, button{
 	}
 	&__photo{
 		&-item{
-			// width: 405px;
-			// height: 605px;
 			display: inline-block;
 			vertical-align: top;
 			@include margin-horizontal(2px,0);
-			
-			&--left{
-				// width: 368px;
-			}
 			&:last-child{
 				@include margin-horizontal(0,0);
 			}
@@ -727,6 +734,9 @@ a, button{
 	text-align: center;
 	&__heading{
 		@include margin-vertical(0,60px);
+		&--popup{
+			@include margin-vertical(0,25px);
+		}
 	}
 	&__form{
 		&-items{
@@ -741,6 +751,11 @@ a, button{
 			width: 260px;
 			@include padding-custom(25px,48px,25px,48px);
 			@include margin-horizontal(76px,0);
+			transition-duration: 0.4s;
+			transition-property: background-color;
+			&--popup{
+				@include margin-custom(0,0,25px,0);
+			}
 			&:last-child{
 				@include margin-horizontal(0,0);
 			};
@@ -751,12 +766,23 @@ a, button{
 			&:hover,
 			&:focus{
 				outline:none;
+				background-color: $gray-dark;
 			};
 		}
 		&-label{
 			display: inline-block;
 			vertical-align: middle;
 			@include margin-vertical(0,70px);
+			cursor:pointer;
+			transition-duration: 0.4s;
+			transition-property: color;
+			&--popup{
+				@include margin-vertical(0,0);
+			}
+			&:hover,
+			&:focus{
+				color: $gray-lighter;
+			}
 			&:before{
 				content:"";
 				display: inline-block;
@@ -766,8 +792,7 @@ a, button{
 				background: url(../images/sprite.png) no-repeat -456px -65px;
 				@include margin-horizontal(11px,0);
 			}
-		}
-		
+		}	
 	}
 	&__info{
 		&-heading{
@@ -783,7 +808,7 @@ a, button{
 		&-text{
 			width: 460px;
 			color: $gray;
-			@include margin-custom(0,auto,35px,auto);
+			@include margin-custom(0,auto,20px,auto);
 		}
 	}
 	&__social{
@@ -826,13 +851,21 @@ a, button{
 		}
 	}
 	&__popup{
-		background-color: $gray-dark;
+		background: $gray-dark;
 		border-radius:10px;
 		width: 555px;
 		@include padding-custom(110px,65px,60px,65px);
 		position: relative;
 		@include margin-custom(0,auto,0,auto)
 		text-align: center;
+		&--submit{
+			@include background-cover;
+			background-image: url(../images/contact-bg.jpg);
+			padding-top:65px;
+			.mfp-close{
+				color: $gray;
+			}
+		}
 		&-text{
 			font-size: 24px;
 			color: $brand-info;
@@ -901,7 +934,7 @@ a, button{
 	}
 	&__text{
 		font-size: 12px;
-		color: $gray-lighter;
+		color: $brand-info;
 		
 	}
 	&__logo{
